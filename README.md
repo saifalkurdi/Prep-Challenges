@@ -10,7 +10,7 @@
 
     ```bash
     npm run pull-challenge 06
-    ```
+    `
 
 - To execute the tests run your the test from the root of `prep-challenges` repo :
 
