@@ -178,8 +178,8 @@ const applicationsStatics = (arr) => {
 //  A Certain School principal wants to calculate the average score of each class in each grade in the school
 //  so he requested a programmer to solve this issue for him instead of doing it again every time
 //
-//  given the school data, calculate the average score of the students of each class in each grade
-//  then change the avg value for the class
+//  given the school data, calculate  the  average score of the students of each class in each grade
+//  then change the avg value for the  class
 //  Input:
 let data = {
     schoolName: "David Academy",
