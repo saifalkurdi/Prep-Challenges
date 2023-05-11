@@ -22,8 +22,11 @@
 
 const objLat = (obj) => {
     // write your code here
-    return "my name is " + obj.firstName + " " + obj.lastName + " I am " + obj.age + " YO, and I love " + obj.hobby +'.'
-};
+    const firstName = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+    const lastName = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    const age = obj.age;
+    const hobby = obj.hobby;
+    return `my name is ${firstName} ${lastName} I am ${age} YO, and I love ${hobby}.`;};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -130,6 +133,41 @@ const cvFormatter = (arr) => {
 
 const applicationsStatics = (arr) => {
     // write your code here
+    const result = {
+        python_devs: 0,
+        javaScript_devs: 0,
+        dotNet_devs: 0,
+        java_devs: 0,
+        totalApplicants: 0,
+        rejectedApplicants: 0,
+      };
+      
+      for (let i = 0; i < arr.length; i++) {
+        const applicant = arr[i];
+        if (applicant.firstName && applicant.lastName && applicant.experience > 1) {
+          result.totalApplicants++;
+          switch (applicant.skills) {
+            case 'python':
+              result.python_devs++;
+              break;
+            case 'javascript':
+              result.javaScript_devs++;
+              break;
+            case 'dotNet':
+              result.dotNet_devs++;
+              break;
+            case 'java':
+              result.java_devs++;
+              break;
+            default:
+              break;
+          }
+        } else {
+          result.rejectedApplicants++;
+        }
+      }
+    
+      return result;
 };
 // -------------------------------------------------------------------------------------------------------
 
